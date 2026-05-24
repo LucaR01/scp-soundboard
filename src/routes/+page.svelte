@@ -1,6 +1,10 @@
 <script lang="ts">
   import { invoke } from "@tauri-apps/api/core";
   import TopBar from "$lib/components/TopBar.svelte";
+  import SoundsPanel from "$lib/components/SoundsPanel.svelte";
+  import SubtitleBar from "$lib/components/SubtitleBar.svelte";
+  import CassiePanel from "$lib/components/CassiePanel.svelte";
+  import IntercomPanel from "$lib/components/IntercomPanel.svelte";
 
   let name = $state("");
   let greetMsg = $state("");
@@ -14,6 +18,10 @@
 
 <div class="layout">
   <TopBar />
+  <SoundsPanel />
+  <SubtitleBar />
+  <CassiePanel />
+  <IntercomPanel />
 </div>
 
 <style>
