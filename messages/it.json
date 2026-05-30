@@ -1,7 +1,7 @@
 {
   "$schema": "https://inlang.com/schema/inlang-message-format",
   "example_message": "Buongiorno {username}",
-  "_comment": "Esegui pnpm exec paraglide-js compile --project ./project.inlang anche se Vite lo aggiorna automaticamente when run the app",
+  "_comment": "Esegui pnpm exec paraglide-js compile --project ./project.inlang anche se Vite lo aggiorna automaticamente quando esegui il software",
   "app_title": "Terminale Audio della Fondazione",
   "app_subtitle": "Sicuro · Contenuto · Protetto"
 }
