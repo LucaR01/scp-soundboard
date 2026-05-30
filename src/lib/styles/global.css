@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap');
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { font-size: 16px; }
+body {
+    font-family: 'JetBrains Mono', 'Cascadia Code', 'Fira Code', monospace;
+    background: #0d0d0d;
+    color: #e8e6e0;
+    min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
+    overflow: hidden;
+}
+
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #2a2a2a; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #3a3a3a; }
+
+:root, [data-theme="amber"] {
+    --accent:      #BA7517;
+    --accent-dim:  #854F0B;
+    --accent-text: #EF9F27;
+    --accent-glow: rgba(186, 117, 23, 0.15);
+}
+[data-theme="phosphor"] {
+    --accent:      #3B6D11;
+    --accent-dim:  #27500A;
+    --accent-text: #77B73A;
+    --accent-glow: rgba(59, 109, 17, 0.15);
+}
+[data-theme="cobalt"] {
+    --accent:      #185FA5;
+    --accent-dim:  #0C447C;
+    --accent-text: #4FA3E8;
+    --accent-glow: rgba(24, 95, 165, 0.15);
+}
+
+:root {
+    /* SCP */
+    --scp-border: #7a1f1f;
+    --scp-text:   #E24B4A;
+    /* MTF */
+    --mtf-border: #1a4f82;
+    --mtf-text:   #4FA3E8;
+    /* Chaos Insurgency */
+    --chaos-border:  #7a4a0a;
+    --chaos-text:    #D4892B;
+    /* C.A.S.S.I.E */
+    --cassie-border: #2d5a0e;
+    --cassie-text:   #77B73A;
+    /* Intercom */
+    --intercom-border: #3d2e8a;
+    --intercom-text:   #9B8EF0;
+
+    --surface-0:  #0d0d0d;
+    --surface-1:  #141414;
+    --surface-2:  #1c1c1c;
+    --surface-3:  #252525;
+    --border:     rgba(255, 255, 255, 0.07);
+    --border-md:  rgba(255, 255, 255, 0.12);
+    --border-hi:  rgba(255, 255, 255, 0.18);
+    --text-pri:   #e8e6e0;
+    --text-sec:   #8a8880;
+    --text-ter:   #4a4846;
+    --danger:     #E24B4A;
+    --danger-dim: rgba(226, 75, 74, 0.12);
+}
+
+button {
+    cursor: pointer;
+    font-family: inherit;
+    border: none;
+    background: none;
+    color: inherit;
+}
+input, textarea, select {
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+}
+textarea { resize: vertical; }
+code {
+    font-family: inherit;
+    font-size: 0.85em;
+    background: var(--surface-3);
+    padding: 1px 5px;
+    border-radius: 3px;
+}

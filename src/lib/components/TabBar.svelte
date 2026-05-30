@@ -44,7 +44,7 @@
     /* Active state per section accent */
     .tab.accent-scp.active      { border-color: var(--scp-border); color: var(--scp-text); background: var(--surface-1); }
     .tab.accent-mtf.active      { border-color: var(--mtf-border); color: var(--mtf-text); background: var(--surface-1); }
-    .tab.accent-ci.active       { border-color: var(--ci-border);  color: var(--ci-text);  background: var(--surface-1); }
+    .tab.accent-chaos.active       { border-color: var(--chaos-border);  color: var(--chaos-text);  background: var(--surface-1); }
     .tab.accent-cassie.active   { border-color: var(--cassie-border);   color: var(--cassie-text);   background: var(--surface-1); }
     .tab.accent-intercom.active { border-color: var(--intercom-border); color: var(--intercom-text); background: var(--surface-1); }
     .tab.active:not([class*="accent-"]) {

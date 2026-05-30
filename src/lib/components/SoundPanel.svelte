@@ -94,7 +94,7 @@
     /* ── Section accent colours when playing ─────────────────── */
     .sbtn.accent-scp.playing { border-color: var(--scp-border); color: var(--scp-text); }
     .sbtn.accent-mtf.playing { border-color: var(--mtf-border); color: var(--mtf-text); }
-    .sbtn.accent-ci.playing  { border-color: var(--ci-border);  color: var(--ci-text);  }
+    .sbtn.accent-chaos.playing  { border-color: var(--chaos-border);  color: var(--chaos-text);  }
 
     .lbl {
         font-weight: 500;
