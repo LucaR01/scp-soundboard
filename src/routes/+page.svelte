@@ -1,32 +1,41 @@
 <script lang="ts">
-  import { invoke } from "@tauri-apps/api/core";
-  import TopBar from "$lib/components/TopBar.svelte";
   import SoundPanel from "$lib/components/SoundPanel.svelte";
-  import SubtitleBar from "$lib/components/SubtitleBar.svelte";
-  import CassiePanel from "$lib/components/CassiePanel.svelte";
-  import IntercomPanel from "$lib/components/IntercomPanel.svelte";
-  import Settings from "$lib/components/Settings.svelte";
-
   import "$lib/styles/global.css";
+  import {app, Tab} from "$lib/stores/state.svelte";
 
-  let name = $state("");
-  let greetMsg = $state("");
 
-  async function greet(event: Event) {
-    event.preventDefault();
-    // Learn more about Tauri commands at https://tauri.app/develop/calling-rust/
-    greetMsg = await invoke("greet", { name });
-  }
 </script>
 
-<!-- <div class="layout">
-  <TopBar />
-  <SoundPanel />
-  <SubtitleBar />
-  <CassiePanel />
-  <IntercomPanel />
-  <Settings />
-</div> -->
+<!-- TODO: Instead of using an if for each tab, I could loop them and write this just once? But SoundPanel needs different section so I'd still need an if for each -->
+{#if app.activeTab === Tab.Scp}
+    <div id="panel-scp" role="tabpanel" aria-labelledby="tab-scp">
+        <SoundPanel /> <!-- TODO: Add section -->
+    </div>
+{:else if app.activeTab === Tab.Mtf}
+    <div id="panel-mtf" role="tabpanel" aria-labelledby="tab-mtf">
+        <SoundPanel /> <!-- TODO: Add section -->
+    </div>
+
+{:else if app.activeTab === Tab.Chaos}
+    <div id="panel-chaos" role="tabpanel" aria-labelledby="tab-chaos">
+        <SoundPanel /> <!-- TODO: Add section -->
+    </div>
+
+{:else if app.activeTab === Tab.Cassie}
+    <div id="panel-cassie" role="tabpanel" aria-labelledby="tab-cassie">
+        <SoundPanel /> <!-- TODO: Add section -->
+    </div>
+
+{:else if app.activeTab === Tab.Intercom}
+    <div id="panel-intercom" role="tabpanel" aria-labelledby="tab-intercom">
+        <SoundPanel /> <!-- TODO: Add section -->
+    </div>
+
+{:else if app.activeTab === Tab.Settings}
+    <div id="panel-settings" role="tabpanel" aria-labelledby="tab-settings">
+        <SoundPanel /> <!-- TODO: Add section -->
+    </div>
+{/if}
 
 <style>
 

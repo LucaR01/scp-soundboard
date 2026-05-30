@@ -1,5 +1,5 @@
 <script lang="ts">
-
+    import * as m from '../../paraglide/messages.js';
 </script>
 
 <div class="notice" role="alert">
@@ -18,7 +18,7 @@
         <!-- TODO: Use {#each sound} -->
         <button class="sbtn " class:playing={undefined} onclick={() => {}} aria-pressed={undefined} aria-label="(Label)">
             <span class="lbl">
-                <i class="ti " aria-hidden="true"></i>
+                <i class="ti {undefined}" aria-hidden="true"></i>
                 (Sound Label) <!-- TODO: Use variable -->
             </span>
             <span class="desc">(Sound Description)</span> <!-- TODO: Use variable -->

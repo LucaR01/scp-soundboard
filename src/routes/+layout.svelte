@@ -4,8 +4,11 @@
     import TabBar from "$lib/components/TabBar.svelte"
     import SoundPanel from "$lib/components/SoundPanel.svelte"
     import SubtitleBar from "$lib/components/SubtitleBar.svelte"
-    import { app } from "$lib/stores/state.svelte"
+    import {app, Tab} from "$lib/stores/state.svelte"
     import { sections } from '$lib/types/sounds'
+    import {initShortcuts} from "$lib/utils/shortcuts";
+
+    let { children } = $props()
 
     const theme = $derived(app.theme);
 
@@ -14,7 +17,7 @@
     })
 
     $effect(() => {
-        function onKey(e: KeyboardEvent) {
+        /*function onKey(e: KeyboardEvent) { //TODO: Remove, use function instead
             const tag = (e.target as HTMLElement).tagName.toLowerCase()
             if (tag === 'textarea' || tag === 'input') return
 
@@ -26,7 +29,8 @@
         }
 
         window.addEventListener('keydown', onKey)
-        return () => window.removeEventListener('keydown', onKey)
+        return () => window.removeEventListener('keydown', onKey)*/
+        initShortcuts()
     })
 
     const scpSection = sections.find(s => s.id === 'scp')!
@@ -39,35 +43,7 @@
     <TabBar />
 
     <main class="content">
-        <!-- TODO: {#if activeTab === scp} -->
-        <div id="panel-scp" role="tabpanel" aria-labelledby="tab-scp">
-            <SoundPanel /> <!-- TODO: Add section -->
-        </div>
-        <!-- TODO: {:else if activeTab === mtf} -->
-        <div id="panel-mtf" role="tabpanel" aria-labelledby="tab-mtf">
-            <SoundPanel /> <!-- TODO: Add section -->
-        </div>
-
-        <!-- TODO: {:else if activeTab === chaos insurgency} -->
-        <div id="panel-chaos" role="tabpanel" aria-labelledby="tab-chaos">
-            <SoundPanel /> <!-- TODO: Add section -->
-        </div>
-
-        <!-- TODO: {:else if activeTab === C.A.S.S.I.E} -->
-        <div id="panel-cassie" role="tabpanel" aria-labelledby="tab-cassie">
-            <SoundPanel /> <!-- TODO: Add section -->
-        </div>
-
-        <!-- TODO: {:else if activeTab === intercom} -->
-        <div id="panel-intercom" role="tabpanel" aria-labelledby="tab-intercom">
-            <SoundPanel /> <!-- TODO: Add section -->
-        </div>
-
-        <!-- TODO: {:else if activeTab === settings} -->
-        <div id="panel-settings" role="tabpanel" aria-labelledby="tab-settings">
-            <SoundPanel /> <!-- TODO: Add section -->
-        </div>
-        <!-- TODO: {/if} -->
+        {@render children()}
     </main>
     <SubtitleBar />
 </div>

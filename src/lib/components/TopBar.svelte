@@ -1,5 +1,6 @@
 <script lang="ts">
 
+    import * as m from '$src/paraglide/messages.js';
     function setLanguage() {
 
     }
@@ -11,8 +12,8 @@
     <div class="logo">
         <div class="badge" aria-hidden="true">SCP</div>
         <div class="title-block">
-            <span class="title-main">TITLE</span>
-            <span class="title-sub">SUBTITLE</span>
+            <span class="title-main">{m.app_title()}</span>
+            <span class="title-sub">{m.app_subtitle()}</span>
         </div>
     </div>
 

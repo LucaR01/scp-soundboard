@@ -14,8 +14,8 @@ export enum Theme {
 }
 
 export enum Language {
-    English = 'english',
-    Italian = 'italian'
+    English = 'English',
+    Italian = 'Italian'
 }
 
 class SubtitleState {

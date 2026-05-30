@@ -1,0 +1,7 @@
+{
+  "$schema": "https://inlang.com/schema/inlang-message-format",
+  "example_message": "Hello world {username}",
+  "_comment": "Run pnpm exec paraglide-js compile --project ./project.inlang even though Vite automatically updates it quando esegui il programma",
+  "app_title": "Foundation Audio Terminal",
+  "app_subtitle": "Secure · Contain · Protect"
+}
